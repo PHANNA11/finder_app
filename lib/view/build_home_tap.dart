@@ -92,7 +92,7 @@ class _BuildHomeTapScreenState extends State<BuildHomeTapScreen> {
                       onTap: () {
                         PersistentNavBarNavigator.pushDynamicScreen(
                           context,
-                          screen: CupertinoPageRoute(
+                          screen: MaterialPageRoute(
                             builder: (context) => ProductDetail(
                               product: list[index],
                             ),
@@ -113,8 +113,8 @@ class _BuildHomeTapScreenState extends State<BuildHomeTapScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Hero(
-                                  transitionOnUserGestures: true,
-                                  tag: 'aa',
+                                  //  transitionOnUserGestures: true,
+                                  tag: list[index].id.toString(),
                                   child: Container(
                                     height: 150,
                                     width: 280,

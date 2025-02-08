@@ -14,7 +14,7 @@ class ProductDetail extends StatefulWidget {
 class _ProductDetailState extends State<ProductDetail> {
   @override
   Widget build(BuildContext context) {
-    final maxHeigth = MediaQuery.of(context).size.height;
+    // final maxHeigth = MediaQuery.of(context).size.height;
     final maxWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
@@ -28,10 +28,11 @@ class _ProductDetailState extends State<ProductDetail> {
           children: [
             Hero(
               transitionOnUserGestures: true,
-              tag: 'aa',
-              child: SizedBox(
-                height: maxHeigth / 2,
-                width: double.infinity,
+              tag: widget.product!.id.toString(),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10.0),
+                // height: maxHeigth / 2,
+                // width: double.infinity,
                 child: Image(
                   fit: BoxFit.cover,
                   image: NetworkImage(
